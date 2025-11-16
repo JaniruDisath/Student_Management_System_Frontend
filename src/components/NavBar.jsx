@@ -1,11 +1,52 @@
 import { Link } from "react-router-dom";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+} from "flowbite-react";
 
 export default function NavBar() {
   return (
-    <nav style={{ display: "flex", gap: "1rem", padding: "1rem", background: "#eee" }}>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
+    <Navbar fluid rounded className="py-5 px-6 text-lg">
+      <NavbarBrand as={Link} to="/">
+        <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
+          Flowbite React
+        </span>
+      </NavbarBrand>
+
+      <div className="flex md:order-2">
+        <NavbarToggle />
+      </div>
+
+      <NavbarCollapse>
+        <NavbarLink
+          as={Link}
+          to="/"
+          className="text-lg font-medium hover:text-blue-600"
+        >
+          Add Student
+        </NavbarLink>
+
+        <NavbarLink
+          as={Link}
+          to="/view"
+          className="text-lg font-medium hover:text-blue-600"
+        >
+          View Student
+        </NavbarLink>
+
+        <NavbarLink
+          as={Link}
+          to="/viewall"
+          className="text-lg font-medium hover:text-blue-600"
+        >
+          View All
+        </NavbarLink>
+
+       
+      </NavbarCollapse>
+    </Navbar>
   );
 }
