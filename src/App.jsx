@@ -15,8 +15,7 @@ export default function App() {
 
       {/* Page content area */}
       <Routes>
-        <Route path="/" element={<AddStudent/>} />
-        <Route path="/view" element={<ViewStudent />} />
+        <Route path="/" element={<ViewStudent />} />
         <Route path="/viewall" element={<ViewAllStudent />} />
 
         {/* Optional 404 */}

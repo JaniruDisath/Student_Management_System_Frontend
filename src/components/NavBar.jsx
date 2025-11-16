@@ -21,17 +21,10 @@ export default function NavBar() {
       </div>
 
       <NavbarCollapse>
-        <NavbarLink
-          as={Link}
-          to="/"
-          className="text-lg font-medium hover:text-blue-600"
-        >
-          Add Student
-        </NavbarLink>
 
         <NavbarLink
           as={Link}
-          to="/view"
+          to="/"
           className="text-lg font-medium hover:text-blue-600"
         >
           View Student
