@@ -10,15 +10,10 @@ import ViewAllStudent from "./pages/ViewAllStudent.jsx";
 export default function App() {
   return (
     <div>
-      {/* Separate navigation */}
       <NavBar />
-
-      {/* Page content area */}
       <Routes>
         <Route path="/" element={<ViewStudent />} />
         <Route path="/viewall" element={<ViewAllStudent />} />
-
-        {/* Optional 404 */}
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
     </div>
