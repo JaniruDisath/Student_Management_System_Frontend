@@ -1,23 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
+import CustomButton from "./components/CustomButton.jsx";
+import AddStudent from "./pages/AddStudent.jsx";
+import ViewStudent from "./pages/ViewStudent.jsx";
+import ViewAllStudent from "./pages/ViewAllStudent.jsx";
+
 
 export default function App() {
   return (
     <div>
-      {/* Separate navigation */}
       <NavBar />
-
-      {/* Page content area */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-
-        {/* Optional 404 */}
+        <Route path="/" element={<ViewStudent />} />
+        <Route path="/viewall" element={<ViewAllStudent />} />
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
     </div>
